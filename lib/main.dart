@@ -7,15 +7,38 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.yellow[700],
+        backgroundColor: Colors.brown[500],
         appBar: AppBar(
           title: Center(
-            child: const Text("I Am Rich"),
+            child: const Text("I Am Pika"),
           ),
           backgroundColor: Colors.blueGrey[200],
         ),
         body: Center(
-          child: CircleAvatar()
+          child: Column(
+            children: <Widget>[
+              Row(
+                children: <Widget>[
+                  Expanded(
+                      child: FlatButton(
+                          onPressed: () {
+                            print('Peek!');
+                          },
+                          child: CircleAvatar(radius: 40,foregroundColor: Colors.brown[900],backgroundColor: Colors.brown[100],))),
+                  SizedBox(width: 80.0, height: 300.0),
+                  Expanded(
+                      child: FlatButton(
+                          onPressed: () {
+                            print('Peeeeeeeeeeeekkkkkk!');
+                            print('Pika');
+                          };
+                          child: CircleAvatar(radius: 40,foregroundColor: Colors.brown[900],backgroundColor: Colors.brown[100],)))
+                    )
+                  )
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
